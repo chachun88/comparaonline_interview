@@ -4,8 +4,9 @@
   "description": "ComparaOnline Software Engineer Test",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha spec/*.js",
-    "after-30-days": "node src/after-30-days.js"
+    "test": "nyc --reporter=html mocha spec/*.js",
+    "after-30-days": "node src/after-30-days.js",
+    "open-coverage-report": "open coverage/index.html"
   },
   "repository": {
     "type": "git",
