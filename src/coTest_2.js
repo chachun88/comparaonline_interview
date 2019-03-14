@@ -18,7 +18,19 @@ class Product {
   }
 
   getModificationRate() {
-    if (!this.isValid() || this.name == 'Super Sale') {
+    if (this.name == 'Special Full Coverage') {
+       if (!this.isValid()) {
+          return -1 * this.price;
+       } if (this.sellIn < 6) {
+          return 3;
+       } else if (this.sellIn < 11){
+          return 2;
+       }
+    }
+    if (this.name == 'Super Sale') {
+      return 2;
+    }
+    if (!this.isValid()) {
       return 2;
     }
     return 1;
@@ -29,19 +41,7 @@ class Product {
       if (this.priceShouldDecrese()) {
           this.price = this.price - this.getModificationRate();
       } else {
-        if (this.name == 'Special Full Coverage') {
-          if (!this.isValid()) {
-            this.price = 0;
-          } else if (this.sellIn < 11) {
-            this.price += 2;
-            if (this.sellIn < 6)
-              this.price += 1;
-          } else {
-            this.price += 1;
-          }
-        } else {
           this.price = this.price + this.getModificationRate();
-        }
       }
       if (this.price > 50) {
         this.price = 50;
