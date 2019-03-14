@@ -1,7 +1,7 @@
 # Disclaimer
 Due to coverage library issue, it's seems that tests aren't covering all the code.
 
-----------------|----------|----------|----------|----------|-------------------|
+```----------------|----------|----------|----------|----------|-------------------|
 File            |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
 ----------------|----------|----------|----------|----------|-------------------|
 All files       |      100 |    95.65 |      100 |      100 |                   |
@@ -10,6 +10,7 @@ All files       |      100 |    95.65 |      100 |      100 |                   
  src            |      100 |    95.65 |      100 |      100 |                   |
   coTest_2.js   |      100 |    95.65 |      100 |      100 |                58 |
 ----------------|----------|----------|----------|----------|-------------------|
+```
 
 But if you look at the html report, by typing `npm run open-coverage-report`
 right after have had ran the tests with the command `npm run test`
